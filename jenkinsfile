@@ -1,0 +1,21 @@
+pipeline{
+  agent any
+  stages{
+    stage("Build"){
+      steps {
+        sh 'javac semestergrade.java'
+        sh 'java semestergrade' 
+      }
+    }
+   stage("Test"){
+      steps{
+        echo 'testing .......'
+      }
+    }
+   stage("Deployment"){
+      steps{
+        echo 'deploying .......'
+      }
+    }
+  }
+}
