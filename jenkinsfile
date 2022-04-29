@@ -3,7 +3,7 @@ pipeline{
   stages{
     stage("Build"){
       steps {
-        sh 'javac semestergrade.java'
+        sh 'javac semestergrade.java.java'
         sh 'java semestergrade' 
       }
     }
